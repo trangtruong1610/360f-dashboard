@@ -1,14 +1,11 @@
+# quickstart
+```bash
 #start docker container
-'''bash
 ./docker/compose-up.sh
-'''
 
 #run test
-'''bash
 pytest -v -s test/test_selenium.py
-'''
 
 #if error i.e ModuleNotFoundError: No module named 'webdriver_docker'
-'''bash
 export PYTHONPATH=$PYTHONPATH:$PWD
-'''
+```

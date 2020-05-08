@@ -8,4 +8,3 @@ docker-compose -f "$SCRIPT_HOME/docker-compose.yml" \
                -d \
                --force-recreate --remove-orphans \
                --scale chrome=1
-
