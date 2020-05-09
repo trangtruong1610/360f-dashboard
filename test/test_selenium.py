@@ -10,7 +10,7 @@ class Test:
         self.driver = loadWebDriver_chrome()
         self.driver.get('https://www.google.com/')
 
-        file_path = os.path.abspath(os.pardir)
+        file_path = os.path.abspath(__file__ + '/../../')
         excel = f'{file_path}/fixture/test_fixture.xlsx'
         test_case = load_input_from_xlsx(excel)
         search_input = self.driver.find_element_by_name('q')
