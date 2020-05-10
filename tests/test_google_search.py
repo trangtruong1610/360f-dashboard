@@ -26,5 +26,5 @@ class Test:
                 'snapshot'    : 'TODO snapshot_f',
             }; r_all.append(r)
 
-        #TODO study to know quit() once or quit at every :tc end is faster
+        #NOTE quit() must put outside the loop
         wd.quit()  # nothing here for now
