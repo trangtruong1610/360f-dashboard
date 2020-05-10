@@ -13,7 +13,7 @@ class Test:
         test_case_all = load_input_from_xlsx(testcase_excel)
 
         r_all = []  # r_all aka all_results
-        for test_case_id, keyword in test_case_all.enumerate():
+        for test_case_id, keyword in test_case_all.items():
             wd.get('https://www.google.com/')
             search_input = wd.find_element_by_name('q')
             search_input.send_keys(keyword)
