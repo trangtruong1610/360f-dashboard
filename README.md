@@ -9,6 +9,5 @@ pipenv sync
 
 # run test
 export PYTHONPATH="$PYTHONPATH:$PWD" ;
-pipenv run  pytest -v -s test/test_selenium.py ;
-
+pipenv run  pytest -v -s tests/test_google_search.py ;
 ```
