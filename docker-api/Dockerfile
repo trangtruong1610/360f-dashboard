@@ -2,9 +2,10 @@ FROM namgivu/ubuntu-pipenv:18.04-3.7
 
 WORKDIR /app
 
-COPY ./Pipfile      .
-COPY ./Pipfile.lock .
-RUN pipenv sync
+RUN echo 200510_x  # update this when Pipfile change to force a rerun
+    COPY ./Pipfile      .
+    COPY ./Pipfile.lock .
+    RUN pipenv sync
 
 COPY . .
 
