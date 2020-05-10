@@ -16,4 +16,7 @@ class Test:
         search_input = wd.find_element_by_name('q')
         search_input.send_keys(test_case[1])
 
+            #TODO Trang take snapshot of the search result here and save to snapshot/
+
+        #TODO study to know quit() once or quit at every :tc end is faster
         wd.quit()  # nothing here for now
