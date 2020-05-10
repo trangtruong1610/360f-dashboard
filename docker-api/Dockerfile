@@ -8,5 +8,8 @@ RUN pipenv sync
 
 COPY . .
 
-
-CMD PYTHONPATH=`pwd`   pipenv run gunicorn   -b '0.0.0.0:5000'   src.app:api
+# expose port 5000 as running falcon+gunicorn web app
+ENV PORT=5000
+EXPOSE $PORT
+    CMD PYTHONPATH=`pwd`   pipenv run gunicorn   -b "0.0.0.0:$PORT"             src.app:api
+    #   register src/      start web app instance            serve at this port    module:falcon_instance
