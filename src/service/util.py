@@ -6,5 +6,6 @@ def load_input_from_xlsx(excel):
 
     data = {}
     for a, b in zip(ws['A'], ws['B']):
-        data[a.value] = b.value
+        testcase_id, google_keyword = a.value, b.value
+        data[testcase_id] = google_keyword
     return data
