@@ -1,11 +1,11 @@
-version: "2.2"
+version: "3.7"
 
 services:
-  # Selenium hub
   chrome:
     image: selenium/standalone-chrome:3.141.59-20200409
     volumes:
+      #TODO what is this for?
       - /dev/shm:/dev/shm
     ports:
       - 4444:4444
-    restart: always
+    restart: unless-stopped
